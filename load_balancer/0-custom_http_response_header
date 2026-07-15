@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Configuring Nginx with a custom X-Served-By response header.
+apt-get update
+apt-get install -y nginx
+echo "add_header X-Served-By \$HOSTNAME;" >> /etc/nginx/sites-available/default
+service nginx restart
